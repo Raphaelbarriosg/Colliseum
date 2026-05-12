@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Colisseum - La Arena de los Gladiadores Modernos. Centro de gaming y eSports premium con estaciones de alto rendimiento, torneos, zona VIP y streaming.">
+    <title>Colisseum | La Arena de los Gladiadores Modernos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+        <a href="#hero" class="nav-logo">
+            <img src="images/logo.png" alt="Colisseum Logo">
+            <span>COLISSEUM</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#servicios" class="nav-link">Servicios</a></li>
+            <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+            <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+            <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+        <a href="#contacto" class="nav-cta">Reservar Ahora</a>
+        <button class="mobile-menu-toggle" id="menuToggle" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" id="mobileClose" aria-label="Cerrar menú">✕</button>
+    <a href="#servicios">Servicios</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="particles" id="particles"></div>
+    <div class="container hero-content">
+        <div class="hero-text">
+            <div class="hero-label">🏛️ Centro Gaming &amp; eSports Premium</div>
+            <h1 class="hero-title">
+                Entra a la <span class="accent">Arena.</span><br>
+                Conviértete en <span class="cream">Leyenda.</span>
+            </h1>
+            <p class="hero-subtitle">
+                El centro de gaming y eSports más épico de la ciudad. Estaciones de alto rendimiento, 
+                torneos competitivos y una experiencia digna de gladiadores modernos.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn-primary">⚔️ Reservar Estación</a>
+                <a href="#servicios" class="btn-secondary">Explorar Servicios →</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <img src="images/hero_visual.png" alt="Colisseum Gaming Arena">
+        </div>
+    </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="social-proof">
+    <div class="container">
+        <div class="proof-stats" data-stagger>
+            <div class="stat-item">
+                <div class="stat-number"><span data-count="50" data-suffix="+">0</span></div>
+                <div class="stat-label">Estaciones Gaming</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number"><span data-count="10000" data-suffix="+">0</span></div>
+                <div class="stat-label">Gladiadores Activos</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number"><span data-count="200" data-suffix="+">0</span></div>
+                <div class="stat-label">Torneos Realizados</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number"><span data-count="5" data-suffix="★">0</span></div>
+                <div class="stat-label">Experiencia Premium</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="section" id="servicios">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">⚔️ Nuestros Servicios</span>
+            <h2 class="section-title">Todo lo que un Gladiador Necesita</h2>
+            <p class="section-subtitle">Desde estaciones de alto rendimiento hasta torneos épicos, tu experiencia gaming comienza aquí.</p>
+        </div>
+        <div class="services-grid" data-stagger>
+            <!-- Service 1: Torneos eSports -->
+            <div class="service-card-flip">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="images/service_2.png" alt="Torneos eSports" class="service-image">
+                        <div class="service-overlay">
+                            <h3 class="service-title-front">Torneos eSports</h3>
+                        </div>
+                    </div>
+                    <div class="service-card-back">
+                        <div class="service-icon-back">🏆</div>
+                        <h3 class="service-title-back">Torneos eSports</h3>
+                        <p class="service-description">Competiciones semanales y mensuales con premios en efectivo. Valorant, League of Legends, CS2 y más.</p>
+                        <div class="service-features">
+                            <span class="feature-tag">Premios</span>
+                            <span class="feature-tag">Ranking</span>
+                            <span class="feature-tag">Streaming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 2: Soporte Técnico Consolas -->
+            <div class="service-card-flip">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="images/service_soporte_consolas.png" alt="Soporte Técnico Consolas" class="service-image">
+                        <div class="service-overlay">
+                            <h3 class="service-title-front">Soporte Consolas</h3>
+                        </div>
+                    </div>
+                    <div class="service-card-back">
+                        <div class="service-icon-back">🎮</div>
+                        <h3 class="service-title-back">Soporte Consolas</h3>
+                        <p class="service-description">Reparación y mantenimiento preventivo para PS5, Xbox Series y Nintendo Switch. Cambio de pastas y limpieza profunda.</p>
+                        <div class="service-features">
+                            <span class="feature-tag">PS5/Xbox</span>
+                            <span class="feature-tag">Limpieza</span>
+                            <span class="feature-tag">Reparación</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 3: Soporte PC Gamer -->
+            <div class="service-card-flip">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="images/service_soporte_pc_gamer.png" alt="Soporte PC Gamer" class="service-image">
+                        <div class="service-overlay">
+                            <h3 class="service-title-front">Soporte PC Gamer</h3>
+                        </div>
+                    </div>
+                    <div class="service-card-back">
+                        <div class="service-icon-back">🚀</div>
+                        <h3 class="service-title-back">Soporte PC Gamer</h3>
+                        <p class="service-description">Optimización de FPS, ensamble personalizado y reparación de hardware de alto rendimiento para gaming profesional.</p>
+                        <div class="service-features">
+                            <span class="feature-tag">Optimización</span>
+                            <span class="feature-tag">Ensamble</span>
+                            <span class="feature-tag">Hardware</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 4: Soporte Laptops -->
+            <div class="service-card-flip">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="images/service_soporte_laptops.png" alt="Soporte Laptops" class="service-image">
+                        <div class="service-overlay">
+                            <h3 class="service-title-front">Soporte Laptops</h3>
+                        </div>
+                    </div>
+                    <div class="service-card-back">
+                        <div class="service-icon-back">💻</div>
+                        <h3 class="service-title-back">Soporte Laptops</h3>
+                        <p class="service-description">Mantenimiento especializado para laptops gaming y corporativas. Mejora de RAM, SSD y solución de sobrecalentamiento.</p>
+                        <div class="service-features">
+                            <span class="feature-tag">Upgrade</span>
+                            <span class="feature-tag">Térmico</span>
+                            <span class="feature-tag">Software</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 5: Soporte Escritorio e Impresoras -->
+            <div class="service-card-flip">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="images/service_soporte_escritorio.png" alt="Soporte Escritorio e Impresoras" class="service-image">
+                        <div class="service-overlay">
+                            <h3 class="service-title-front">Oficina e Impresoras</h3>
+                        </div>
+                    </div>
+                    <div class="service-card-back">
+                        <div class="service-icon-back">🖨️</div>
+                        <h3 class="service-title-back">Oficina e Impresoras</h3>
+                        <p class="service-description">Soporte técnico integral para equipos de escritorio e impresoras. Configuración de redes y mantenimiento preventivo.</p>
+                        <div class="service-features">
+                            <span class="feature-tag">Impresoras</span>
+                            <span class="feature-tag">Redes</span>
+                            <span class="feature-tag">Desktop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 6: Zona Consolas -->
+            <div class="service-card-flip">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="images/service_5.png" alt="Zona Consolas" class="service-image">
+                        <div class="service-overlay">
+                            <h3 class="service-title-front">Zona Consolas</h3>
+                        </div>
+                    </div>
+                    <div class="service-card-back">
+                        <div class="service-icon-back">🎮</div>
+                        <h3 class="service-title-back">Zona Consolas</h3>
+                        <p class="service-description">PS5, Xbox Series X y Nintendo Switch en pantallas gigantes. Perfecto para sesiones multijugador con amigos.</p>
+                        <div class="service-features">
+                            <span class="feature-tag">PS5</span>
+                            <span class="feature-tag">Xbox</span>
+                            <span class="feature-tag">Switch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCIA / SHOWCASE -->
+<section class="section" id="experiencia" style="background:var(--bg-secondary);">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">🏟️ La Experiencia Colisseum</span>
+            <h2 class="section-title">Más que un Centro Gaming</h2>
+            <p class="section-subtitle">Una comunidad de guerreros digitales donde cada partida es una batalla épica.</p>
+        </div>
+        <div class="showcase-grid" data-stagger>
+            <div class="showcase-card glass-card" style="padding:0;overflow:hidden;">
+                <img src="images/service_soporte_pc_gamer.png" alt="Soporte PC Gamer">
+                <div class="showcase-info">
+                    <h3>Soporte Técnico Élite</h3>
+                    <p>Mantén tu equipo en el campo de batalla con nuestro servicio técnico.</p>
+                    <div class="showcase-stat">
+                        <span>⚡ Optimización</span>
+                        <span>🛠️ Reparación</span>
+                        <span>🖥️ Mantenimiento</span>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-card glass-card" style="padding:0;overflow:hidden;">
+                <img src="images/service_soporte_consolas.png" alt="Soporte Consolas">
+                <div class="showcase-info">
+                    <h3>Arena de Torneos</h3>
+                    <p>Escenario profesional para competiciones locales y regionales.</p>
+                    <div class="showcase-stat">
+                        <span>🏆 Premios Semanales</span>
+                        <span>📺 Transmisión en Vivo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="section" id="testimonios">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">💬 Testimonios</span>
+            <h2 class="section-title">Lo que Dicen Nuestros Gladiadores</h2>
+            <p class="section-subtitle">La comunidad que ha encontrado su arena.</p>
+        </div>
+        <div class="testimonials-grid" data-stagger>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">"</div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">El mejor lugar para gaming en la ciudad. Los PCs son bestiales y el ambiente es increíble. Me siento como un profesional cada vez que vengo.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">DK</div>
+                    <div>
+                        <div class="testimonial-name">Daniel K.</div>
+                        <div class="testimonial-role">Jugador Competitivo - Valorant</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">"</div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">Organizamos el cumpleaños de mi hijo aquí y fue épico. La zona VIP es otro nivel. Los niños no querían irse. ¡Volveremos seguro!</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">MR</div>
+                    <div>
+                        <div class="testimonial-name">María R.</div>
+                        <div class="testimonial-role">Mamá Gamer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">"</div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">Como streamer, el estudio de Colisseum es perfecto. Equipamiento profesional, internet ultra rápido y un ambiente que inspira contenido de calidad.</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">AX</div>
+                    <div>
+                        <div class="testimonial-name">Alex G.</div>
+                        <div class="testimonial-role">Streamer &amp; Content Creator</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NOSOTROS -->
+<section class="section" id="nosotros" style="background:var(--bg-secondary);">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image reveal">
+                <img src="images/hero_visual.png" alt="Sobre Colisseum">
+            </div>
+            <div class="about-text reveal">
+                <span class="section-label">🏛️ Sobre Nosotros</span>
+                <h2>Quiénes Somos</h2>
+                <p>Colisseum nació con una visión: crear el escenario donde el talento se convierte en leyenda. Inspirados en la grandeza del Coliseo Romano, transformamos el concepto de gaming en una experiencia épica e inolvidable.</p>
+                <p>No somos solo un centro de gaming. Somos la arena donde los gladiadores modernos compiten, crean y se conectan. Cada detalle, desde nuestro hardware de élite hasta nuestra atmósfera inmersiva, está diseñado para que dejes de ser una persona común y te transformes en el héroe de tu propia epopeya.</p>
+                <div class="about-values">
+                    <div class="value-item"><span class="icon">⚔️</span> Competición Épica</div>
+                    <div class="value-item"><span class="icon">🏛️</span> Legado y Tradición</div>
+                    <div class="value-item"><span class="icon">🚀</span> Tecnología de Vanguardia</div>
+                    <div class="value-item"><span class="icon">🤝</span> Comunidad Gamer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section" id="contacto">
+    <div class="container cta-content">
+        <div class="reveal">
+            <span class="section-label">🔥 ¿Listo para la Batalla?</span>
+            <h2 class="cta-title">La Arena te Espera, Gladiador</h2>
+            <p class="cta-subtitle">Reserva tu estación y vive la experiencia gaming más épica. Tu leyenda comienza hoy.</p>
+            <div class="hero-buttons" style="justify-content:center;">
+                <a href="https://wa.me/584241389348" class="btn-primary" target="_blank">⚔️ Reservar por WhatsApp</a>
+                <a href="https://instagram.com/" class="btn-secondary" target="_blank">📸 Síguenos en Instagram</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Colisseum">
+                    <span>COLISSEUM</span>
+                </div>
+                <p>La arena de los gladiadores modernos. El centro de gaming y eSports premium donde los jugadores se transforman en leyendas.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="#servicios">Soporte Consolas</a></li>
+                    <li><a href="#servicios">Torneos eSports</a></li>
+                    <li><a href="#servicios">Soporte PC Gamer</a></li>
+                    <li><a href="#servicios">Laptops y Oficina</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Comunidad</h4>
+                <ul>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Ranking</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="#">Ubicación</a></li>
+                    <li><a href="#">Horarios</a></li>
+                    <li><a href="https://wa.me/584241389348" target="_blank">WhatsApp</a></li>
+                    <li><a href="#">Email</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-qr">
+                <h4>Comunidad</h4>
+                <div class="qr-card">
+                    <img src="images/qr_canal.png" alt="Canal de WhatsApp Gladiadores" class="qr-image">
+                    <p>¡Únete a nuestro canal!</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Colisseum. Todos los derechos reservados. | Identidad Gráfica por Trip Creator</p>
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram">📸</a>
+                <a href="#" aria-label="TikTok">🎵</a>
+                <a href="#" aria-label="Discord">💬</a>
+                <a href="#" aria-label="YouTube">▶️</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

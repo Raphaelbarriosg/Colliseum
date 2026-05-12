@@ -1,0 +1,12 @@
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Project artifacts
+pdf_extracted/
+colliseum.pdf
+extract_images.py
+
+# Temp files
+*.tmp
+*.log
