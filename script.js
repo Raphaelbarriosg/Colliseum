@@ -43,8 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== SMOOTH SCROLL =====
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
+      const href = anchor.getAttribute('href');
+      if (href === '#torneo') return;
       e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute('href'));
+      const target = document.querySelector(href);
       if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
@@ -124,6 +126,64 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // ===== TORNEO: DISPONIBLE SLOTS =====
+  document.querySelectorAll('.participante-slot.disponible').forEach(slot => {
+    slot.addEventListener('click', () => {
+      const slotNum = slot.querySelector('.slot-number').textContent;
+      window.open(
+        'https://wa.me/584241389348?text=' +
+        encodeURIComponent('¡Hola! Quiero inscribirme en el torneo MK11 Ultimate. ' + slotNum),
+        '_blank'
+      );
+    });
+  });
+
+  // ===== TORNEO MODAL =====
+  const torneoModal = document.getElementById('torneoModal');
+  const closeTorneo = document.getElementById('closeTorneo');
+  const btnOpenTorneo = document.getElementById('btnOpenTorneo');
+
+  const openModal = (e) => {
+    if(e) e.preventDefault();
+    if(e) e.stopPropagation();
+    if (torneoModal) {
+      torneoModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  const closeModal = () => {
+    if (torneoModal) {
+      torneoModal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  };
+
+  if (btnOpenTorneo) {
+    btnOpenTorneo.addEventListener('click', openModal);
+  }
+
+  if (closeTorneo) {
+    closeTorneo.addEventListener('click', closeModal);
+  }
+
+  if (torneoModal) {
+    torneoModal.addEventListener('click', (e) => {
+      if (e.target === torneoModal) closeModal();
+    });
+  }
+
+  // Handle Navbar links to #torneo
+  document.querySelectorAll('a[href="#torneo"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+      // Close mobile menu if open
+      const mobileNav = document.getElementById('mobileNav');
+      if (mobileNav) mobileNav.classList.remove('open');
+    });
+  });
 
   // ===== NAVBAR ACTIVE LINK =====
   const sections = document.querySelectorAll('section[id]');
