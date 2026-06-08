@@ -275,20 +275,114 @@
     </div>
 </section>
 
-<!-- TORNEO MK11 MODAL -->
+<!-- TORNEO ANNOUNCEMENT MODAL -->
 <div id="torneoModal" class="modal">
     <div class="modal-content">
         <button class="close-modal" id="closeTorneo" aria-label="Cerrar modal">&times;</button>
         
-        <div class="torneo-header reveal">
-            <span class="section-label">🏆 Torneo Activo</span>
-            <h2>Torneo FLAS: Mortal Kombat 11 Ultimate</h2>
-            <p>¡La arena te espera, gladiador! Demuestra tu valor en el combate definitivo.</p>
+        <!-- Futuristic scan lines overlay -->
+        <div class="futuristic-scanlines"></div>
+        <div class="futuristic-particles" id="modalParticles"></div>
+
+        <!-- Header with glitch effect -->
+        <div class="futuristic-header">
+            <div class="futuristic-badge-hud">
+                <span class="futuristic-dot"></span>
+                TRANSMISIÓN ENTRANTE
+            </div>
+            <h2 class="futuristic-glitch" data-text="PRÓXIMOS TORNEOS">PRÓXIMOS TORNEOS</h2>
+            <div class="futuristic-line"></div>
+            <p class="futuristic-subtitle">⚡ Se aproximan batallas legendarias en la arena ⚡</p>
         </div>
 
-        <div class="torneo-details-grid reveal">
-            <div class="torneo-details-col">
-                <h4>🗓️ Información del Evento</h4>
+        <!-- Game Cards -->
+        <div class="futuristic-games-grid">
+            <!-- MK11 Card -->
+            <div class="futuristic-game-card mk-card">
+                <div class="game-card-glow"></div>
+                <div class="game-card-border"></div>
+                <div class="game-card-content">
+                    <div class="game-card-icon">🐉</div>
+                    <div class="game-card-badge">TORNEO</div>
+                    <h3 class="game-card-title">Mortal Kombat 11</h3>
+                    <p class="game-card-edition">ULTIMATE EDITION</p>
+                    <div class="game-card-divider"></div>
+                    <div class="game-card-tags">
+                        <span>⚔️ Eliminación Directa</span>
+                        <span>🏆 Premios en $</span>
+                        <span>🎮 PS5 / Xbox</span>
+                    </div>
+                    <div class="game-card-status">
+                        <span class="status-icon">◈</span>
+                        FECHA POR ANUNCIAR
+                    </div>
+                </div>
+            </div>
+
+            <!-- FIFA Card -->
+            <div class="futuristic-game-card fifa-card">
+                <div class="game-card-glow"></div>
+                <div class="game-card-border"></div>
+                <div class="game-card-content">
+                    <div class="game-card-icon">⚽</div>
+                    <div class="game-card-badge">TORNEO</div>
+                    <h3 class="game-card-title">EA Sports FC</h3>
+                    <p class="game-card-edition">FIFA 2026 · WORLD CUP</p>
+                    <div class="game-card-divider"></div>
+                    <div class="game-card-tags">
+                        <span>🌍 Modo Mundial</span>
+                        <span>🏆 Premios en $</span>
+                        <span>🎮 PS5 / Xbox</span>
+                    </div>
+                    <div class="game-card-status">
+                        <span class="status-icon">◈</span>
+                        FECHA POR ANUNCIAR
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Announcement CTA -->
+        <div class="futuristic-announce">
+            <div class="announce-hex-container">
+                <div class="announce-hex">
+                    <span>📡</span>
+                </div>
+            </div>
+            <h3 class="announce-title">Las Fechas Serán Reveladas En Nuestras Redes</h3>
+            <p class="announce-text">Síguenos para no perderte la apertura de inscripciones, premios exclusivos y toda la información de los torneos.</p>
+            
+            <div class="futuristic-socials">
+                <a href="https://instagram.com/" target="_blank" class="futuristic-social-btn instagram-btn">
+                    <span class="social-icon">📸</span>
+                    <div>
+                        <span class="social-name">Instagram</span>
+                        <span class="social-handle">@colisseum</span>
+                    </div>
+                </a>
+                <a href="#" target="_blank" class="futuristic-social-btn tiktok-btn">
+                    <span class="social-icon">🎵</span>
+                    <div>
+                        <span class="social-name">TikTok</span>
+                        <span class="social-handle">@colisseum</span>
+                    </div>
+                </a>
+                <a href="https://wa.me/584241389348" target="_blank" class="futuristic-social-btn whatsapp-btn">
+                    <span class="social-icon">💬</span>
+                    <div>
+                        <span class="social-name">WhatsApp</span>
+                        <span class="social-handle">Canal Oficial</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="futuristic-alert">
+                <div class="alert-pulse"></div>
+                <span>🔔 ACTIVA LAS NOTIFICACIONES PARA SER EL PRIMERO EN ENTERARTE</span>
+            </div>
+        </div>
+    </div>
+</div>
                 <ul class="torneo-info-list">
                     <li class="torneo-info-item">
                         <span class="icon">📅</span>
