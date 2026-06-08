@@ -465,6 +465,9 @@ img { max-width:100%; display:block; }
 .futuristic-alert { display:inline-flex; align-items:center; gap:10px; padding:8px 16px; background:rgba(0,255,200,.05); border:1px solid rgba(0,255,200,.2); border-radius:4px; font-size:.7rem; font-weight:700; color:var(--text-secondary); letter-spacing:.1em; }
 .alert-pulse { width:8px; height:8px; background:#00ffc8; border-radius:50%; box-shadow:0 0 10px #00ffc8; animation:wc-pulse 1s infinite; }
 
+.futuristic-return-btn { display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:8px; font-family:var(--font-display); font-weight:700; font-size:.9rem; color:var(--text-secondary); background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); cursor:pointer; transition:all 0.3s; text-transform:uppercase; letter-spacing:.1em; }
+.futuristic-return-btn:hover { background:rgba(255,255,255,.1); color:#fff; border-color:var(--primary-400); transform:translateX(-4px); box-shadow:-4px 0 15px rgba(var(--primary-rgb),.3); }
+
 @media(max-width:767px){
   .modal-content { padding:25px 15px; }
   .futuristic-games-grid { grid-template-columns:1fr; gap:20px; }

@@ -210,6 +210,11 @@ document.addEventListener('DOMContentLoaded', () => {
     closeTorneo.addEventListener('click', closeModal);
   }
 
+  const btnReturnMain = document.getElementById('btnReturnMain');
+  if (btnReturnMain) {
+    btnReturnMain.addEventListener('click', closeModal);
+  }
+
   if (torneoModal) {
     torneoModal.addEventListener('click', (e) => {
       if (e.target === torneoModal) closeModal();
