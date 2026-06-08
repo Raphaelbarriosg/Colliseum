@@ -212,6 +212,184 @@ img { max-width:100%; display:block; }
   .particle:nth-child(n+20){display:none;}
 }
 
+/* WORLD CUP 2026 COUNTDOWN */
+@keyframes wc-pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(1.3)} }
+@keyframes wc-glow { 0%,100%{box-shadow:0 0 20px rgba(0,200,83,.15),0 0 60px rgba(0,200,83,.05)} 50%{box-shadow:0 0 30px rgba(0,200,83,.25),0 0 80px rgba(0,200,83,.1)} }
+@keyframes wc-shimmer { 0%{background-position:-200% center} 100%{background-position:200% center} }
+@keyframes wc-number-pop { 0%{transform:scale(1)} 50%{transform:scale(1.08)} 100%{transform:scale(1)} }
+
+.wc-countdown {
+  padding:20px 0;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,rgba(0,50,30,.3) 0%,rgba(0,0,0,.95) 40%,rgba(0,0,0,.95) 60%,rgba(50,20,0,.3) 100%);
+  border-top:1px solid rgba(0,200,83,.15);
+  border-bottom:1px solid rgba(0,200,83,.15);
+}
+.wc-countdown::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse at 20% 50%,rgba(0,200,83,.06) 0%,transparent 60%),
+             radial-gradient(ellipse at 80% 50%,rgba(var(--cream-rgb),.04) 0%,transparent 60%);
+  pointer-events:none;
+}
+.wc-countdown-inner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:32px;
+  position:relative;
+  z-index:2;
+  padding:16px 28px;
+  border-radius:20px;
+  background:linear-gradient(135deg,rgba(0,200,83,.04),rgba(0,0,0,.4),rgba(var(--cream-rgb),.03));
+  border:1px solid rgba(0,200,83,.12);
+  backdrop-filter:blur(12px);
+  transition:all .4s ease;
+  animation:wc-glow 4s ease-in-out infinite;
+}
+.wc-countdown-inner:hover {
+  border-color:rgba(0,200,83,.3);
+  transform:translateY(-2px);
+}
+.wc-countdown-info {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.wc-badge {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:4px 14px;
+  border-radius:50px;
+  background:rgba(0,200,83,.1);
+  border:1px solid rgba(0,200,83,.25);
+  font-size:.65rem;
+  font-weight:700;
+  color:#4ade80;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  width:fit-content;
+}
+.wc-live-dot {
+  display:inline-block;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#4ade80;
+  animation:wc-pulse 1.5s ease-in-out infinite;
+}
+.wc-title-row {
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.wc-trophy {
+  font-size:2rem;
+  filter:drop-shadow(0 0 12px rgba(0,200,83,.4));
+  line-height:1;
+}
+.wc-title {
+  font-family:var(--font-display);
+  font-size:1.3rem;
+  font-weight:800;
+  background:linear-gradient(135deg,#fff 0%,#4ade80 40%,var(--cream) 80%,#fff 100%);
+  background-size:300% 100%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:wc-shimmer 6s ease infinite;
+  letter-spacing:.02em;
+  line-height:1.2;
+}
+.wc-subtitle {
+  font-size:.78rem;
+  color:var(--text-quaternary);
+  font-weight:500;
+  margin-top:2px;
+  letter-spacing:.04em;
+}
+.wc-countdown-timer {
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.wc-time-block {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  min-width:64px;
+}
+.wc-time-value {
+  font-family:var(--font-display);
+  font-size:2.2rem;
+  font-weight:800;
+  color:#fff;
+  line-height:1;
+  background:linear-gradient(180deg,rgba(0,200,83,.08),rgba(0,0,0,.6));
+  border:1px solid rgba(0,200,83,.2);
+  border-radius:12px;
+  padding:10px 14px;
+  min-width:64px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  text-shadow:0 0 20px rgba(0,200,83,.3);
+  transition:all .3s ease;
+}
+.wc-time-value::after {
+  content:'';
+  position:absolute;
+  top:50%;
+  left:0;
+  right:0;
+  height:1px;
+  background:rgba(0,200,83,.08);
+}
+.wc-time-value.pop {
+  animation:wc-number-pop .3s ease;
+}
+.wc-time-label {
+  font-size:.65rem;
+  font-weight:600;
+  color:var(--text-quaternary);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+.wc-time-separator {
+  font-family:var(--font-display);
+  font-size:1.8rem;
+  font-weight:800;
+  color:rgba(0,200,83,.4);
+  margin-top:-18px;
+}
+
+/* WC Countdown responsive */
+@media(max-width:1023px) {
+  .wc-countdown-inner {
+    flex-direction:column;
+    text-align:center;
+    gap:20px;
+    padding:20px;
+  }
+  .wc-countdown-info { align-items:center; }
+  .wc-title-row { justify-content:center; }
+}
+@media(max-width:767px) {
+  .wc-countdown { padding:16px 0; }
+  .wc-countdown-inner { padding:16px; }
+  .wc-title { font-size:1.05rem; }
+  .wc-trophy { font-size:1.5rem; }
+  .wc-time-block { min-width:52px; }
+  .wc-time-value { font-size:1.6rem; padding:8px 10px; min-width:52px; border-radius:10px; }
+  .wc-time-separator { font-size:1.4rem; margin-top:-14px; }
+  .wc-time-label { font-size:.55rem; }
+  .wc-countdown-timer { gap:5px; }
+}
+
 /* TORNEO MK11 MODAL & CONCENTRIC RINGS */
 .modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,.95); z-index:2000; overflow-y:auto; backdrop-filter:blur(15px); }
 .modal.open { display:block; animation:fade-in-up 0.4s ease forwards; }

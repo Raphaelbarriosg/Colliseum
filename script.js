@@ -115,6 +115,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 16);
   }
 
+  // ===== WORLD CUP 2026 COUNTDOWN =====
+  const wcTarget = new Date('2026-06-11T17:00:00Z').getTime(); // Kickoff: June 11, 2026 at 1PM ET (17:00 UTC)
+  const wcDays = document.getElementById('wcDays');
+  const wcHours = document.getElementById('wcHours');
+  const wcMinutes = document.getElementById('wcMinutes');
+  const wcSeconds = document.getElementById('wcSeconds');
+
+  function updateWCCountdown() {
+    const now = Date.now();
+    const diff = wcTarget - now;
+
+    if (diff <= 0) {
+      if (wcDays) wcDays.textContent = '00';
+      if (wcHours) wcHours.textContent = '00';
+      if (wcMinutes) wcMinutes.textContent = '00';
+      if (wcSeconds) wcSeconds.textContent = '00';
+      return;
+    }
+
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+    const pad = (n) => String(n).padStart(2, '0');
+
+    if (wcDays) wcDays.textContent = pad(d);
+    if (wcHours) wcHours.textContent = pad(h);
+    if (wcMinutes) wcMinutes.textContent = pad(m);
+    if (wcSeconds) {
+      wcSeconds.textContent = pad(s);
+      wcSeconds.classList.remove('pop');
+      void wcSeconds.offsetWidth; // force reflow to restart animation
+      wcSeconds.classList.add('pop');
+    }
+  }
+
+  if (wcDays && wcHours && wcMinutes && wcSeconds) {
+    updateWCCountdown();
+    setInterval(updateWCCountdown, 1000);
+  }
+
   // ===== FLIP CARDS (MOBILE TAP) =====
   if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
     document.querySelectorAll('.service-card-flip').forEach(card => {
